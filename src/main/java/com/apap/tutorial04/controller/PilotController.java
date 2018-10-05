@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Controller class for mapping that related to Pilot
+ */
 @Controller
 public class PilotController {
     @Autowired
@@ -42,12 +45,7 @@ public class PilotController {
 
     @RequestMapping(value = "/pilot/delete",method = RequestMethod.POST)
     private String deletePilot(@ModelAttribute PilotModel pilot){
-        System.err.println(pilot.getId());
-        System.err.println(pilot.getName());
-
-
         pilotService.delete(pilot);
-
         return "delete";
     }
     @RequestMapping(value = "/pilot/update/{licenseNumber}")

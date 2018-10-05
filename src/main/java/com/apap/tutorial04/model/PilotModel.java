@@ -6,6 +6,10 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * This class represents a pilot. This class set a table in the database
+ * based on setting below. Column license number have to be unique.
+ */
 @Entity
 @Table(name = "pilot")
 public class PilotModel implements Serializable {

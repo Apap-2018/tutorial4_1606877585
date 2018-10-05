@@ -11,6 +11,11 @@ import java.io.Serializable;
 import java.sql.Date;
 
 
+/**
+ * This class represents a flight. This class set a table in the database
+ * based on setting below
+ */
+
 @Entity
 @Table(name = "flight")
 public class FlightModel implements Serializable {
